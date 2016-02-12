@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ex1</title>
+
+
+</head>
+
+<body ng-app="MonApp">
+
+	
+	<div ng-view></div>
+	
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.2.14/angular-route.min.js"></script>
+<script>
+	var app = angular.module('MonApp', ['ngRoute']);
+	
+	app.config(function($routeProvider)
+	{
+		$routeProvider
+		.when('/',{templateUrl: 'partials/home.html'})
+		.when('/comments',{templateUrl: 'partials/comments.html'})
+		.otherwise({redirectTo: '/'});
+	});
+	
+	app.controller('CommentsCtrl',function ($scope)
+	{
+		//console.log($scope);
+		$scope.comments = 
+		
+		[
+		  {
+			"username": "Naomi",
+			"city": "Draper",
+			"company": "BITENDREX",
+			"email": "naomiharding@bitendrex.com",
+			"content": "Eiusmod minim excepteur ex est duis velit labore. Ipsum magna laboris cillum sit velit commodo tempor consectetur. Incididunt Lorem ea veniam dolore nulla pariatur eu. Labore dolor fugiat sit amet in nostrud consectetur dolor enim. Pariatur exercitation commodo do et consequat mollit ex eiusmod."
+		  },
+		  {
+			"username": "Megan",
+			"city": "Loyalhanna",
+			"company": "KLUGGER",
+			"email": "meganharding@klugger.com",
+			"content": "Commodo officia eu dolor officia voluptate consequat fugiat adipisicing excepteur est. Ea nostrud mollit irure Lorem quis magna. Quis consectetur et adipisicing cillum incididunt consequat consectetur. Culpa sint occaecat non velit pariatur ad. Duis eiusmod aute ipsum amet mollit aliquip eiusmod."
+		  },
+		  {
+			"username": "Hicks",
+			"city": "Crumpler",
+			"company": "BITREX",
+			"email": "hicksharding@bitrex.com",
+			"content": "Ea irure ipsum dolore tempor adipisicing incididunt ex. Labore est est mollit sunt excepteur voluptate reprehenderit. Enim ea sint quis labore eu. Qui et voluptate id nulla pariatur incididunt in Lorem anim. Nostrud ullamco est occaecat et dolore veniam dolore exercitation officia."
+		  },
+		  {
+			"username": "Claudine",
+			"city": "Hondah",
+			"company": "QABOOS",
+			"email": "claudineharding@qaboos.com",
+			"content": "Reprehenderit incididunt aliquip aliquip veniam sint deserunt voluptate. Cillum Lorem veniam minim eiusmod. Est exercitation mollit dolor enim mollit reprehenderit occaecat aliquip consectetur do voluptate in eu. Proident fugiat id reprehenderit exercitation do esse qui officia proident adipisicing labore duis excepteur. Consequat aliqua est dolor ullamco fugiat aliqua incididunt labore."
+		  },
+		  {
+			"username": "White",
+			"city": "Hampstead",
+			"company": "RETROTEX",
+			"email": "whiteharding@retrotex.com",
+			"content": "Ut ipsum quis cillum commodo. Ea nisi tempor cupidatat nostrud aliquip aliquip id et cupidatat sunt velit laboris. Consequat excepteur fugiat qui et proident officia ut ullamco ipsum velit laboris. Anim eiusmod ut magna exercitation ipsum incididunt aute voluptate aliquip mollit occaecat officia. Ex qui dolor reprehenderit cupidatat excepteur reprehenderit excepteur proident elit laborum et."
+		  },
+		  {
+			"username": "Ebony",
+			"city": "Beason",
+			"company": "EXTRAGEN",
+			"email": "ebonyharding@extragen.com",
+			"content": "Officia eiusmod id sit non ipsum. Proident do minim et et aliqua consequat sint esse aliqua eu. Mollit magna Lorem dolore tempor. Cupidatat anim dolore ipsum commodo reprehenderit irure id. Quis sint sit occaecat non Lorem nostrud aliqua ex ea deserunt aliqua aliquip culpa."
+		  },
+		  {
+			"username": "Gracie",
+			"city": "Catherine",
+			"company": "XIXAN",
+			"email": "gracieharding@xixan.com",
+			"content": "Culpa consectetur dolor voluptate est dolor dolore fugiat in cupidatat cillum dolore labore do. Dolore tempor amet laborum esse fugiat tempor anim officia sint consectetur. Minim esse fugiat velit anim ipsum aliquip nisi ut ea cillum. Nostrud dolore non incididunt aliqua magna est cillum non sint ad qui cupidatat in ea. Eiusmod cupidatat duis do magna qui anim ullamco."
+		  }
+		];
+		
+		
+	});
+</script>
+
+</body>
+</html>	
